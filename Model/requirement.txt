@@ -1,0 +1,7 @@
+numpy
+pytorch-gpu
+scipy
+networkx
+scikit-learn
+umap-learn
+dill
