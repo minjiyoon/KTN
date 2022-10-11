@@ -1,7 +1,8 @@
 numpy
-pytorch-gpu
+pytorch
 scipy
 networkx
 scikit-learn
 umap-learn
 dill
+pandas
