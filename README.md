@@ -10,7 +10,7 @@ You can see our [NeurIPS 2022 paper](https://arxiv.org/abs/2203.02018) for more 
 `Model/` directory contains how to train HGNN and KTN models on the preprocessed heterogeneous datasets. 
   
 ## Setup
-This implementation is based on python==3.7. To run the code, you need the dependencies listed in `requirement.txt'
+This implementation is based on python==3.7. To run the code, you need the dependencies listed in `requirement.txt`
 
 ## OAG DataSet
 Our current experiments are conducted on Open Academic Graph on Computer Science field (OAG-CS). 
