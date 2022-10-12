@@ -168,9 +168,6 @@ def pretrain(args, types, relations, feat_dims, label_dim, source_data, target_d
     #print(">>>>>>>>>Source accuracy before fine-tuning<<<<<<<<<<")
     src_loss, src_micro_acc, src_macro_acc, src_match_loss = evaluate(gnn, classifier, args.train_batch, args.test_batch, args.source_node, source_data)
     #print("Loss: ", src_loss, ",\t Micro acc: ", src_micro_acc, ",\t Macro acc: ", src_macro_acc, ",\t Matching loss: ", src_match_loss)
-    if args.model_name == 'HGNN':
-        file_name = args.save_model + args.dataset + 'model_' + args.source_node + '_' + args.target_node + '_' + args.source_task + '_' + args.target_task + '.pt'
-        torch.save({'gnn': gnn.state_dict(), 'classifier': classifier.state_dict()}, file_name)
 
     del source_data
     torch.cuda.empty_cache()
@@ -183,9 +180,8 @@ def pretrain(args, types, relations, feat_dims, label_dim, source_data, target_d
     #print("Loss: ", trg_loss1, ", Micro acc: ", trg_micro_acc1, ", Macro acc: ", trg_macro_acc1)
 
     #print(">>>>>>>>>Target accuracy after fine-tuning<<<<<<<<<<")
-    trg_loss2, trg_micro_acc2, trg_macro_acc2 = finetuning(args, gnn, classifier, target_data)
+    #trg_loss2, trg_micro_acc2, trg_macro_acc2 = finetuning(args, gnn, classifier, target_data)
 
     return src_loss, src_micro_acc, src_macro_acc, src_match_loss, \
-        trg_loss1, trg_micro_acc1, trg_macro_acc1, \
-        trg_loss2, trg_micro_acc2, trg_macro_acc2
+        trg_loss1, trg_micro_acc1, trg_macro_acc1
 

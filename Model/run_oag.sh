@@ -1,3 +1,5 @@
+set -o errexit
+
 # computer science
 SOURCE_NODES=("paper" "author" "author" "venue" "paper" "author" "author" "venue")
 TARGET_NODES=("author" "paper" "venue" "author" "author" "paper" "venue" "author")
@@ -11,7 +13,7 @@ MATCHING_HOPSS=(1 1 2 2 1 1 2 2)
 
 length=${#SOURCE_NODES[@]}
 
-for ((i=1;i<=$length;i++))
+for ((i=0;i<=$length;i++))
 do
     python main.py --dataset "graph_CS/" \
          --source_node "${SOURCE_NODES[$i]}" --target_node "${TARGET_NODES[$i]}" \
@@ -35,7 +37,7 @@ done
 #
 #length=${#SOURCE_NODES[@]}
 #
-#for ((i=1;i<=$length;i++))
+#for ((i=0;i<=$length;i++))
 #do
 #    python main.py --dataset "graph_CN/" \
 #         --source_node "${SOURCE_NODES[$i]}" --target_node "${TARGET_NODES[$i]}" \
@@ -59,7 +61,7 @@ done
 #
 #length=${#SOURCE_NODES[@]}
 #
-#for ((i=1;i<=$length;i++))
+#for ((i=0;i<=$length;i++))
 #do
 #    python main.py --dataset "graph_ML/" \
 #         --source_node "${SOURCE_NODES[$i]}" --target_node "${TARGET_NODES[$i]}" \
