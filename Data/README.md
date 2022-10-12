@@ -7,3 +7,4 @@ For your convenience, we share their urls to dataset below.
 4. Place `SeqName_CS_20190919.tsv` under `DATA/graph_CS/`
 5. Run `python Data/main.py`
 6. If you want to extract Machine Learning (ML) or Computer Network (CN) subgraphs from the OAG CS graph, run `mkdir DATA/graph_ML; python DATA/extract.py`
+
