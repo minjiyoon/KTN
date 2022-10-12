@@ -17,7 +17,7 @@ Our current experiments are conducted on Open Academic Graph on Computer Science
 More information to how to download and preprocess OAG-CS dataset can be found in `Data/` directory.
 
 ## Usage
-Execute `MODEL/run_oag.sh` to run 8 different zero-shot transfer learning tasks on the OAG-CS graph using KTN.
+Execute `cd MODEL; sh run_oag.sh` to run 8 different zero-shot transfer learning tasks on the OAG-CS graph using KTN.
 The details of other optional hyperparameters can be found in args.py.
 
 ### Citation
